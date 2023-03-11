@@ -15,16 +15,17 @@
 
 int main(void)
 {
-	SPI_Master_Init();
-	SPI_Enable();
+	//Please create a struct that can be inputted into the function below SPI_VoidInit as be sure to set role as master
+	SPI_VoidInit();
+	SPI_u8Enable();
 	//GIE_voidENABLE();
     /* Replace with your application code */
 	_delay_ms(500);
     while (1) 
     {
-		SPI_Send_Byte('a');
+		SPI_u8SendRecData('a');
 		_delay_ms(500);
-		SPI_Send_Byte('b');
+		SPI_u8SendRecData('b');
 		_delay_ms(2500);
     }
 }
