@@ -1,0 +1,2 @@
+Implementations on I2C and EEPROM are in the projects folder
+But with other drivers so its separated from the other applications
