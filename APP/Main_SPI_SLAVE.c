@@ -17,14 +17,14 @@ int main(void)
 {
 	u8 data = 0;
 	LED_INIT();
-	SPI_Slave_Init();
-	SPI_Enable();
+	//Please create a struct that can be inputted in the function below and be sure to set role as Slave
+	SPI_VoidInit();
 	//GIE_voidENABLE();
 	/*LED_TOGGLE(LED_YELLOW);*/
 	/* Replace with your application code */
 	while (1)
 	{
-		data = SPI_slave_receive_byte();
+		data = SPI_u8SendRecData();
 		
 		if(data == 0)
 		{
